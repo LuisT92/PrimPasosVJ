@@ -4,28 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/controller.svg">
+    <title>Juego</title>
+  </head>
 </head>
 <body>
     <script src="juego.js"></script>
-    <div class="personaje">
-        <div class="poderesP1">
-            <button class="ataque1P1"></button>
-            <button class="ataque2P1"></button>
-            <button class="defensa1P1"></button>
-            <button class="defensa2P1"></button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <div class="seleccion">
+        <div class="jugador1">
+            <div class="personaje">
+                <!--boton elegir personaje asociado a la funcion elegirPersonaje-->
+                <button onclick="elegirPersonaje()">Elegir personaje</button>
+                <div class="personajeElegido">
+                    <!--muestra el personaje que la funcion elegirPersonaje le asigna-->
+                    <img src="" alt="" id="personajeElegido">
+                    <!--muestra el nombre del personaje que la funcion elegirPersonaje le asigna-->
+                    <p id="nombrePersonaje"></p>
+                    <!--muestra la vida del personaje que la funcion elegirPersonaje le asigna-->
+                    <p id="vidaPersonaje"></p>
+                    <!--muestra el atque y defensa que se le asigno al personaje-->
+                    <p id="ataquePersonaje"></p>
+                    <p id="defensaPersonaje"></p>
+                </div>
+                <!--botones para el juego, solo se coloca el boton ataque y el boton desactivado de recuperacio   -->
+                <button id="ataque">Ataque</button>
+                <button id="recuperacion" disabled>Recuperacion</button>
+                <div class="vida">
+                </div>
+            </div>
         </div>
-        <div class="vidaP1"></div>
+        <div class="jugador2"></div>
     </div>
-    <div class="personaje2">
-        <div class="poderesP2">
-            <button class="ataque1P1"></button>
-            <button class="ataque2P1"></button>
-            <button class="defensa1P1"></button>
-            <button class="defensa2P1"></button>
-        </div>
-        <div class="vidap2"></div>
-    </div>
-
 </body>
 </html>
